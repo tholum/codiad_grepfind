@@ -6,7 +6,8 @@
 */
 
 
-$('#context-menu').append("<a class='directory-only' data-action='grepfind-open_search' style='display: block;'><span class='icon'>n</span>find</a>");
+/*$('#context-menu').append("<a class='directory-only' onclick='grepfind.open_search(data);' data-action='grepfind-open_search' style='display: block;'><span class='icon'>n</span>find</a>");*/
+$('#context-menu').append("<a class='directory-only' onclick=\"grepfind.open_search($('#context-menu').attr('data-path'));\" data-action='grepfind-open_search' style='display: block;'><span class='icon'>n</span>find</a>");
 
 var grepfind = {
     controller : 'components/grepfind/controller.php',
